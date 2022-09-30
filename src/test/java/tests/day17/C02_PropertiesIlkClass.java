@@ -1,6 +1,10 @@
 package tests.day17;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.HotelMyCampPage;
+import utilities.ConfigReader;
+import utilities.Driver;
 
 public class C02_PropertiesIlkClass {
     @Test
@@ -9,9 +13,18 @@ public class C02_PropertiesIlkClass {
 
         //     https://www.hotelmycamp.com/  adresine git
         //Driver.getDriver().get("buraya yapistirmak icin, properties dosyasina git HMCUrl'e karsilik gelen degeri getir..");
+        Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         //     Login butonuna bas
-        //     test data username: manager1 ,
-        //     test data password: manager1!
-        //     Degerleri girildiginde sayfaya girilmedigini test et.
+        HotelMyCampPage hotelMyCampPage=new HotelMyCampPage();
+        hotelMyCampPage.ilkLoginLinki.click();
+        //     test data username: manager ,
+        hotelMyCampPage.userNameBox.sendKeys(ConfigReader.getProperty("HMCValidUsername"));
+        //     test data password: Manager1!
+        hotelMyCampPage.passwordBox.sendKeys(ConfigReader.getProperty("HMCValidPassword"));
+        hotelMyCampPage.loginButonu.click();
+        hotelMyCampPage.bekle(4);
+        //     Degerleri girildiginde sayfaya basarili sekilde girilebildigini test et
+        Assert.assertTrue(hotelMyCampPage.basariliGirisYazisiElementi.isDisplayed());
+        Driver.closeDriver();
     }
 }

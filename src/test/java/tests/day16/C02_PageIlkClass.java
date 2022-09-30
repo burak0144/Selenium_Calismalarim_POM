@@ -8,12 +8,13 @@ import pages.AmazonPage;
 import utilities.Driver;
 
 public class C02_PageIlkClass {
+    AmazonPage amazonPage;
     @Test
     public void test01() {
 
         Driver.getDriver().get("https://amazon.com");
         // arama kutusuna "Nutella" yazip aratalim
-        AmazonPage amazonPage=new AmazonPage();
+        amazonPage=new AmazonPage();
         amazonPage.amazonAramaKutusu.sendKeys("Nutella", Keys.ENTER);
         // arama sonuclarinin "Nutella" icerdigini test edelim
         String actualSonucStr=amazonPage.sonucYazisiElementi.getText();
@@ -26,7 +27,7 @@ public class C02_PageIlkClass {
         //amazona gidelim
         Driver.getDriver().get("https://www.amazon.com");
         //java icin arama yapalim
-       AmazonPage amazonPage=new AmazonPage();
+        amazonPage=new AmazonPage();
        amazonPage.amazonAramaKutusu.sendKeys("java",Keys.ENTER);
         //sonucun java icerdigini teset edelim
         String sonucYazisiStr=amazonPage.sonucYazisiElementi.getText();

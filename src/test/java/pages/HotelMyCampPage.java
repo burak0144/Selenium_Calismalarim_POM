@@ -10,23 +10,23 @@ public class HotelMyCampPage {
    public HotelMyCampPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
-    @FindBy(xpath = "//a[text()='Log in']" )
+    @FindBy(xpath = "//a[text()='Log in']")
     public WebElement ilkLoginLinki;
 
-   @FindBy(xpath = "//input[@id='UserName']")
+    @FindBy(xpath = "//input[@type='text']")
     public WebElement userNameBox;
 
-   @FindBy(xpath="//input[@id='Password']")
+    @FindBy(xpath = "//input[@id='Password']")
     public WebElement passwordBox;
 
-   @FindBy(xpath = "//input[@id='btnSubmit']")
+    @FindBy(xpath = "//input[@id='btnSubmit']")
     public WebElement loginButonu;
-
-    @FindBy(xpath = "//span[@class='caption-subject font-green-sharp bold uppercase']")
-    public WebElement basariliGirisYazisiElementi;
 
     @FindBy(xpath = "//div[@class='validation-summary-errors']")
     public WebElement girisYapilamadiYaziElementi;
+
+    @FindBy(xpath = "//span[@class='caption-subject font-green-sharp bold uppercase']")
+    public WebElement basariliGirisYazisiElementi;
 
     public void bekle(int saniye) {
         try {

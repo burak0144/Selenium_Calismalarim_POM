@@ -11,18 +11,18 @@ public class ConfigReader {
 
     static {
         String path="src/configuration.properties";
-
         try {
-            FileInputStream fis = new FileInputStream(path);  //dosyayi akisa aldik
-            properties = new Properties();
-            properties.load(fis);        //akisa aldigimiz dosyayi properties'e yukledik
+
+            FileInputStream fis=new FileInputStream(path);//dosyayi akisa aldik
+            properties=new Properties();
+            properties.load(fis);//akisa aldigimiz dosyayi properties'e yukledik
             fis.close();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
+
 
     public static String getProperty(String key) { //Test classindan gonderdigimiz key'i Properties
         return properties.getProperty(key);//class'i sayesinde configuration.properties text'inden

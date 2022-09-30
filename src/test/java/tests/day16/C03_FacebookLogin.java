@@ -21,6 +21,9 @@ public class C03_FacebookLogin {
         facebookPage.passKutusu.sendKeys(faker.internet().password());
         facebookPage.loginButonu.click();
         // 4- Basarili giris yapilamadigini test edin
+
+
+
         try {
             String actualText = facebookPage.girisYapilamadi.getText();
             Assert.assertTrue(actualText.contains("Facebook"));

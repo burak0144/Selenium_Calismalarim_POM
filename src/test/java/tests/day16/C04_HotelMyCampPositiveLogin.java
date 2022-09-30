@@ -3,6 +3,7 @@ package tests.day16;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HotelMyCampPage;
+import utilities.ConfigReader;
 import utilities.Driver;
 
 public class C04_HotelMyCampPositiveLogin {
@@ -18,6 +19,7 @@ public class C04_HotelMyCampPositiveLogin {
         hotelMyCampPage.ilkLoginLinki.click();
     //    test data username: manager ,
         hotelMyCampPage.userNameBox.sendKeys("manager");
+        hotelMyCampPage.userNameBox.sendKeys(ConfigReader.getProperty("HMCValidUsername"));
     //    test data password : Manager1!
         hotelMyCampPage.passwordBox.sendKeys("Manager1!");
         hotelMyCampPage.loginButonu.click();
