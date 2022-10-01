@@ -7,6 +7,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 public class Driver {
+
+    private Driver() {//baska classtan obje ureterek getDriver'a ulasilmasini engellemek icin
+    }                 //parametresiz constructor ile private yaptik
+
     //diger classlardan class ismiyle cagiracagimiz icin static hepsinin ulasmasi icinde public yaptik
    static WebDriver driver;
 
