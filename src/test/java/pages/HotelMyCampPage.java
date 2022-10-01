@@ -28,6 +28,30 @@ public class HotelMyCampPage {
     @FindBy(xpath = "//span[@class='caption-subject font-green-sharp bold uppercase']")
     public WebElement basariliGirisYazisiElementi;
 
+    @FindBy(xpath = "//span[text()='Hotel Management']")
+    public WebElement hotelManagementLinki;
+
+    @FindBy(xpath = "//a[@href='/admin/HotelAdmin']")
+    public WebElement hotelListLinki;
+
+    @FindBy(xpath = "//a[@class='btn btn-circle btn-default']")
+    public WebElement addHotelLinki;
+
+    @FindBy(xpath = "(//input[@type='text'])[1]")
+    public WebElement addHotelCodeKutusu;
+
+    @FindBy(xpath = "//select[@id='IDGroup']" )
+    public WebElement addHotelDropdown;
+
+    @FindBy(xpath ="//button[@id='btnSubmit']" )
+    public WebElement addHotelSaveButonu;
+
+    @FindBy(xpath = "//div[@class='bootbox-body']")
+    public WebElement basariliEklendi;
+
+    @FindBy(xpath = "(//button[@type='button'])[6]")
+    public WebElement lastButtonOK;
+
     public void bekle(int saniye) {
         try {
             Thread.sleep(saniye * 1000);
@@ -42,5 +66,6 @@ public class HotelMyCampPage {
         passwordBox.sendKeys(ConfigReader.getProperty("HMCValidPassword"));
         loginButonu.click();
     }
+
 }
 
