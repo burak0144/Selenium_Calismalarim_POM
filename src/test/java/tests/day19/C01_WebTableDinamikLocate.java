@@ -19,6 +19,7 @@ public class C01_WebTableDinamikLocate {
         hotelMyCampPageWebTables=new HotelMyCampPageWebTables();
         // 4. satiri yazdir   //tbody//tr[4]  index olarak 3
         hotelMyCampPageWebTables.satirYazdir(3);
+        Driver.closeDriver();
     }
 
     @Test
@@ -33,6 +34,7 @@ public class C01_WebTableDinamikLocate {
         //AMA GET() METHODUNU KULLANDIGIMIZDA INDEX DEVREYE GIRER VE BI USTTEKI ORNEKTE OLDUGU GIBI
         //ISTEDIGI SATIRIN GET() 'TE BIR EKSIGI YAZILIR77
         System.out.println("istediginiz satirdaki istediginiz hucre :"+hotelMyCampPageWebTables.hucreGetir(4, 3));
+        Driver.closeDriver();
     }
 
     @Test
@@ -42,5 +44,6 @@ public class C01_WebTableDinamikLocate {
         hotelMyCampPage.girisYap();
         hotelMyCampPageWebTables=new HotelMyCampPageWebTables();
         hotelMyCampPageWebTables.sutunYazdir(3);
+        Driver.closeDriver();
 }
 }

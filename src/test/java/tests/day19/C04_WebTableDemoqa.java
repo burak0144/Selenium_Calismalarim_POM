@@ -1,6 +1,6 @@
 package tests.day19;
 
-public class C02_WebTableDemoqa {
+public class C04_WebTableDemoqa {
 
     //Bir Class olusturun D19_WebtablesHomework
     //1. “https://demoqa.com/webtables” sayfasina gidin

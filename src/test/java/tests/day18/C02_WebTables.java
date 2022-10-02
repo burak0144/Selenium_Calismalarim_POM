@@ -7,7 +7,7 @@ import pages.HotelMyCampPageWebTables;
 
 import java.util.List;
 
-public class C01_WebTables {
+public class C02_WebTables {
     HotelMyCampPageWebTables hotelMyCampPageWebTables;
 
     @Test
