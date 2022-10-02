@@ -2,6 +2,7 @@ package tests.day19;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HotelRoomAdminWebTables;
 import utilities.ConfigReader;
@@ -43,5 +44,10 @@ public class C03_WebTableOdev {
     //a. Ve bu metodu printData( ) methodunu cagirmak icin kullanin.
     //b. Örnek: printData (3,5); => 3. satır, 5. Sütundaki veriyi yazdırmalıdır
     //c. yazdirilan datanin olmasi gereken dataya esit oldugunu test edin
+        hotelRoomAdminWebTables=new HotelRoomAdminWebTables();
+
+       String actualData=hotelRoomAdminWebTables.printData(3,5);
+       String expectedData="USA";
+        Assert.assertEquals(actualData,expectedData);
 }
 }

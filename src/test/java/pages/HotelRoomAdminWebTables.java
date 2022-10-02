@@ -53,10 +53,10 @@ public class HotelRoomAdminWebTables {
 
     }
 
-    public void printData(int satir, int sutun) {
-        int satirSayisi=satirlar.size();
+    public String printData(int satir, int sutun) {
         String dinamikXPath="//tbody//tr["+satir+"]//td["+sutun+"]";
         WebElement dinamikXPathWE=Driver.getDriver().findElement(By.xpath(dinamikXPath));
-        System.out.println(satir+".satir ve "+sutun+".sutundaki cell :"+dinamikXPathWE.getText());
+        String result=dinamikXPathWE.getText();
+        return result;
     }
 }
