@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -37,6 +38,7 @@ public class HotelMyCampPageWebTables {
     @FindBy(xpath = "//tbody//tr")
     public List<WebElement> satirlarListesi;
 
+
     public void girisYap(){
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         ilkLoginLinki.click();
@@ -45,5 +47,28 @@ public class HotelMyCampPageWebTables {
         loginButonu.click();
     }
 
+    public void satirYazdir(int satir){
+        System.out.println(satir+1+".satirdaki datalar =>>"+satirlarListesi.get(satir).getText());
+    }
+
+    public String hucreGetir(int satir,int sutun) {
+        //tbody//tr[x]//td[y]
+       String dinamikHucrexPath="//tbody//tr["+satir+"]//td["+sutun+"]";
+       WebElement dinamikHucreWE=Driver.getDriver().findElement(By.xpath(dinamikHucrexPath));
+       String hucreDatasi=dinamikHucreWE.getText();
+
+        return hucreDatasi;
+    }
+
+    public void sutunYazdir(int sutun) {
+        int satirSayisi=satirlarListesi.size();
+
+        for (int i = 1; i <=satirSayisi ; i++) {
+
+            System.out.println(hucreGetir(i,sutun));
+
+        }
+
+    }
 }
 
