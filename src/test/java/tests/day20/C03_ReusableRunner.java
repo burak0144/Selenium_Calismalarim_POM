@@ -1,6 +1,6 @@
 package tests.day20;
 
-public class C03 {
+public class C03_ReusableRunner {
     //1) Yeni bir Class olusturalim WriteExcel
     //2) Yeni bir test method olusturalim writeExcelTest()
     //3) Adimlari takip ederek 1.satira kadar gidelim

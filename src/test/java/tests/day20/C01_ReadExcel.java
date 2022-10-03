@@ -1,6 +1,6 @@
 package tests.day20;
 
-public class C01_Excel {
+public class C01_ReadExcel {
     //1. apache poi dependency’i pom file’a ekleyelim
     //2. Java klasoru altinda resources klasoru olusturalim
     //3. Excel dosyamizi resources klasorune ekleyelim

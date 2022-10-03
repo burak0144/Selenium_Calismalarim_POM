@@ -44,8 +44,11 @@ public class C04_WebTableDemoqa {
         System.out.println("==========3.kolon");
        demoqaWebTables.xKolonuYazdir(3);
     //9. Tabloda "First Name" i Kierra olan kisinin Salary'sini yazdirin
-
+        System.out.println("=========First Name'i Kierra olan kisinin Salary'si");
+      demoqaWebTables.getSalary("Kierra");
     //10. Page sayfasinda bir method olusturun, Test sayfasindan satir ve sutun sayisini
     //girdigimde bana datayi yazdirsin
+        System.out.println("==========satir ve sutun verip cell yazdir");
+        demoqaWebTables.getCell(3,5);
 }
 }

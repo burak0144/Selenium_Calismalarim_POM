@@ -32,13 +32,45 @@ public class DemoqaWebTables {
          }
      }
 
-    public void xKolonuYazdir(int sutun ){
-         int satirSayisi=satirList.size();
-         String dinamikXpath=null;
-        for (int i = 1; i <=satirSayisi ; i++) {
-            dinamikXpath="((//div[@class='rt-tr-group'])["+i+"]//div[@class='rt-td'])["+sutun+"]";
-            WebElement dinamikXpathWE=Driver.getDriver().findElement(By.xpath(dinamikXpath));
-            System.out.println(dinamikXpathWE.getText());
+    public void xKolonuYazdir(int sutun ) {
+        int satirSayisi = satirList.size();
+        String dinamikXpath;
+        WebElement dinamikXpathWE;
+        System.out.println(basliklar.get(sutun - 1).getText());
+        WebElement bosCellXPathWE = Driver.getDriver().findElement(By.xpath("(//div[@class='rt-td'])["+22+"]"));
+        for (int i = 1; i <= satirSayisi; i++) {
+            dinamikXpath = "((//div[@class='rt-tr-group'])[" + i + "]//div[@class='rt-td'])[" + sutun + "]";
+            dinamikXpathWE = Driver.getDriver().findElement(By.xpath(dinamikXpath));
+            if (sutun<=21){
+                System.out.println(dinamikXpathWE.getText());
+
+            }
+
         }
+
+
     }
+    public void getSalary(String isim) {
+        int satirSayisi=satirList.size();
+        String dinamikXpath;
+        WebElement firtName;
+        WebElement salary;
+        for (int i = 1; i <=satirSayisi ; i++) {
+            dinamikXpath="((//div[@class='rt-tr-group'])["+i+"]//div[@class='rt-td'])["+1+"]";
+            firtName=Driver.getDriver().findElement(By.xpath(dinamikXpath));
+            dinamikXpath="((//div[@class='rt-tr-group'])["+i+"]//div[@class='rt-td'])["+5+"]";
+            salary=Driver.getDriver().findElement(By.xpath(dinamikXpath));
+            if (firtName.getText().equals(isim)){
+                System.out.println(salary.getText());
+            }
+
+        }
+
+    }
+
+    public void getCell(int satir, int sutun) {
+       String dinamikXpath="((//div[@class='rt-tr-group'])["+satir+"]//div[@class='rt-td'])["+sutun+"]";
+    WebElement dinamikXpathWE=Driver.getDriver().findElement(By.xpath(dinamikXpath));
+        System.out.println(dinamikXpathWE.getText());
+     }
 }

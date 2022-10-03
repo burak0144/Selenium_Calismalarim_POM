@@ -1,6 +1,6 @@
 package tests.day20;
 
-public class C02 {
+public class C02_ReadExcel {
     //Yeni bir test method olusturalim readExcel2( )
     //- 1.satirdaki 2.hucreye gidelim ve yazdiralim
     //- 1.satirdaki 2.hucreyi bir string degiskene atayalim ve yazdiralim
