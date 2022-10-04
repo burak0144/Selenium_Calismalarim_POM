@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="belirli classlar">
+    <test name="classlar">
+        <classes>
+            <class name="tests.day16.C01_DriverIlkTest"/>
+            <class name="tests.day17.C02_PropertiesIlkClass"/>
+            <!--istedigim package'tan istedigimiz class'i ekleriz en n ctrl+s ile kaydetmemiz gerekir-->
+        </classes>
+    </test>
+</suite>
