@@ -17,7 +17,7 @@ public class NegativeLoginTest {
     //3) Login butonuna bas
     //4) Verilen senaryolar ile giris yapilamadigini test et
 
-    @Test
+    @Test(groups = "smoke")
     public void yanlisSifre() {
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         //   login butonuna bas
@@ -32,7 +32,7 @@ public class NegativeLoginTest {
         Driver.closeDriver();
     }
 
-    @Test
+    @Test(groups = "smoke")
     public void yanlisKulllanici() {
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         //   login butonuna bas
@@ -47,7 +47,7 @@ public class NegativeLoginTest {
         Driver.closeDriver();
     }
 
-    @Test
+    @Test(groups = "smoke")
     public void yanlisSifreKullanici() {
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         //   login butonuna bas

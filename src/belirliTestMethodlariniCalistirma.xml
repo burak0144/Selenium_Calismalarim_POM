@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="methodlar">
+    <test name="smoke">
+        <classes>
+            <class name="tests.smokeTest.NegativeLoginTest">
+                <methods>
+                    <include name="yanlisSifre"/>
+                    <include name="yanlisKulllanici"/>
+                    <exclude name="yanlisSifreKullanici"/>
+                    <!--method secimi yapilirken
+                    include : secilirse geriye kalanlar exclude gibi olur
+                    exclude secilirse geriye kalanlar include olur-->
+                </methods>
+            </class>
+            <!--eger bir test icerisinde birden fazla hiyerarsi olusturmamiz gerekirse
+         uygun kırilma noktasi belirleyip orada hiyerarsi yi tekrar olusturabiliriz-->
+            <class name="tests.e2eTesting.C01_E2ETesting">
+                <methods>
+                    <include name="testName"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>

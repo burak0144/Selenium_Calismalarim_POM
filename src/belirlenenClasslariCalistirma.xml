@@ -4,7 +4,7 @@
         <classes>
             <class name="tests.day16.C01_DriverIlkTest"/>
             <class name="tests.day17.C02_PropertiesIlkClass"/>
-            <!--istedigim package'tan istedigimiz class'i ekleriz en n ctrl+s ile kaydetmemiz gerekir-->
+            <!--istedigim package'tan istedigimiz class'i ekleriz en son ctrl+s ile kaydetmemiz gerekir-->
         </classes>
     </test>
 </suite>

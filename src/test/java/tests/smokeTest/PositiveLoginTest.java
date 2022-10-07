@@ -7,7 +7,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 
 public class PositiveLoginTest {
-    @Test
+    @Test(groups = "smoke")
     public void positiveLoginTest() {
         //   1) com.techproed altinda bir package olustur : smoketest
         //   2) Bir Class olustur : PositiveTest

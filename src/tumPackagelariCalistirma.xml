@@ -2,7 +2,7 @@
 <suite name="tum packageleri calistirma">
     <test name="tum testler">
         <packages>
-            <package name=".*"/>
+            <package name="tests.*"/>
         </packages>
     </test>
 </suite>

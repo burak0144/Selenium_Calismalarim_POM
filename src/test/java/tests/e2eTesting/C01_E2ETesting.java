@@ -12,7 +12,7 @@ import utilities.Driver;
 
 public class C01_E2ETesting {
 
-    @Test
+    @Test(groups = {"E2E Test", "smoke"})
     public void testName() {
         //1. Tests packagenin altına class olusturun: CreateHotel
         //2. Bir metod olusturun: createHotel
