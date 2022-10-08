@@ -32,8 +32,9 @@ public class C01_WebTableDinamikLocate {
         //DIMAMIK XPATH YAZARKEN 1'E 1 HANGI SATIR SUTUN ISTENIYORSA YAZILIR CUNKU BURADA
         //XPATH ALINIRKEN  //tbody//tr[x]//td[y] ' DE INDEX'E BAKILMAZ
         //AMA GET() METHODUNU KULLANDIGIMIZDA INDEX DEVREYE GIRER VE BI USTTEKI ORNEKTE OLDUGU GIBI
-        //ISTEDIGI SATIRIN GET() 'TE BIR EKSIGI YAZILIR77
+        //ISTEDIGI SATIRIN GET() 'TE BIR EKSIGI YAZILIR
         System.out.println("istediginiz satirdaki istediginiz hucre :"+hotelMyCampPageWebTables.hucreGetir(4, 3));
+        System.out.println(hotelMyCampPageWebTables.hucreGetir(5, 5));
         Driver.closeDriver();
     }
 

@@ -33,15 +33,15 @@ public class C05_WriteExcel {
     //6) 2.satir NUMARA kolonuna 4634234 yazdiralim
         workbook.getSheet("Sayfa1").getRow(1).createCell(5).setCellValue("4634234");
     //7) 10.satir NUMARA kolonuna 10923634 yazdiralim
-        workbook.getSheet("Sayfa1").getRow(10).createCell(5).setCellValue("10923634");
+        workbook.getSheet("Sayfa1").getRow(9).createCell(5).setCellValue("10923634");
     //8) 15.satir NUMARA kolonuna 54022131 yazdiralim
-        workbook.getSheet("Sayfa1").getRow(10).createCell(5).setCellValue("54022131");
+        workbook.getSheet("Sayfa1").getRow(14).createCell(5).setCellValue("54022131");
     //9) Dosyayi kaydedelim
         FileOutputStream fos=new FileOutputStream(path); //yazdiriyoruz disari gonderiyoruz
        workbook.write(fos);
     //10)Dosyayi kapatalim
 
-        //FileOutputStrem Write yazar disari gonderir
-        //FileInputStrem Read okur iceri alir
+        //FileOutputStream Write yazar disari gonderir
+        //FileInputStream Read okur iceri alir
 }
 }

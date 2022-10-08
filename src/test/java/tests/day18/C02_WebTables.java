@@ -37,7 +37,7 @@ public class C02_WebTables {
              ) {
             System.out.println(w.getText());
         }
-
+      //  headerDataList.forEach(t-> System.out.println(t.getText()));
     //○ Table’daki tum body’I ve başlıkları(headers) konsolda yazdırın.
     // //table basliklarla birlikte yazdirir  yada   //tbody basliksiz butun table yazar
         System.out.println("==========tum datalar tek String halinde");
@@ -56,7 +56,7 @@ public class C02_WebTables {
         tumBodyList.forEach(t-> System.out.println(t.getText()));
 }
 
-    @Test(dependsOnMethods = "loginT")
+    @Test(priority = 2,dependsOnMethods = "loginT")
     public void printRows() {
 
     //● printRows( ) metodu oluşturun //tr
