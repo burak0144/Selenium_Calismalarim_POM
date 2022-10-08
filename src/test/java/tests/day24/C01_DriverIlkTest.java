@@ -1,9 +1,8 @@
-package tests.day16;
+package tests.day24;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.Driver;
-import utilities.TestBaseCross;
 
 public class C01_DriverIlkTest {
 

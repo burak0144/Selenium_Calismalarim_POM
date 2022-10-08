@@ -5,8 +5,10 @@ import org.testng.annotations.Test;
 import pages.HotelMyCampPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseCross;
 
-public class PositiveLoginTest {
+public class PositiveLoginTest  {
+
     @Test(groups = "smoke")
     public void positiveLoginTest() {
         //   1) com.techproed altinda bir package olustur : smoketest

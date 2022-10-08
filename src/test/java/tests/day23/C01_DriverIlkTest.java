@@ -1,18 +1,18 @@
-package tests.day16;
+package tests.day23;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.Driver;
 import utilities.TestBaseCross;
 
-public class C01_DriverIlkTest {
-
+public class C01_DriverIlkTest extends TestBaseCross {
+    //CrossBrowserda calistirabilmek icin TestBaseCross'a extends edilir
     @Test
     public void test01() {
         //amazona gidelim
-        Driver.getDriver().get("https://amazon.com");
+        driver.get("https://amazon.com");
         //amazona gittigimizi test edelim
-        String actualTitle=Driver.getDriver().getTitle();
+        String actualTitle=driver.getTitle();
         Assert.assertTrue(actualTitle.contains("Amazon"));
         // Driver.getDriver methodu her calistigibda
         // driver=new ChromeDriver(); komutundan oturu yeni bir driver olusturuyor
@@ -25,10 +25,10 @@ public class C01_DriverIlkTest {
     @Test
     public void test02() {
         //bestbuy anasayfaya gidelim
-        Driver.getDriver().get("https://bestbuy.com");
+       driver.get("https://bestbuy.com");
         //bestbuy'a gittigimizi test edelim
 
-        String actualurl=Driver.getDriver().getCurrentUrl();
+        String actualurl=driver.getCurrentUrl();
         Assert.assertTrue(actualurl.contains("bestbuy"));
         Driver.closeDriver();
     }

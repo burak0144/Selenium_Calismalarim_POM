@@ -1,4 +1,4 @@
-package tests.day16;
+package tests.day23;
 
 
 import org.openqa.selenium.Keys;
@@ -8,13 +8,13 @@ import pages.AmazonPage;
 import utilities.Driver;
 import utilities.TestBaseCross;
 
-public class C02_PageIlkClass {
-
+public class C02_PageIlkClass extends TestBaseCross {
+    //CrossBrowserda calistirabilmek icin TestBaseCross'a extends edilir
     AmazonPage amazonPage;
     @Test
     public void test01() {
 
-        Driver.getDriver().get("https://amazon.com");
+        driver.get("https://amazon.com");
         // arama kutusuna "Nutella" yazip aratalim
         amazonPage=new AmazonPage();
         amazonPage.amazonAramaKutusu.sendKeys("Nutella", Keys.ENTER);
@@ -27,7 +27,7 @@ public class C02_PageIlkClass {
     @Test
     public void test02() {
         //amazona gidelim
-        Driver.getDriver().get("https://www.amazon.com");
+       driver.get("https://www.amazon.com");
         //java icin arama yapalim
         amazonPage=new AmazonPage();
        amazonPage.amazonAramaKutusu.sendKeys("java",Keys.ENTER);

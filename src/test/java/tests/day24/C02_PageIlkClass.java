@@ -1,4 +1,4 @@
-package tests.day16;
+package tests.day24;
 
 
 import org.openqa.selenium.Keys;
@@ -8,7 +8,7 @@ import pages.AmazonPage;
 import utilities.Driver;
 import utilities.TestBaseCross;
 
-public class C02_PageIlkClass {
+public class C02_PageIlkClass  {
 
     AmazonPage amazonPage;
     @Test
