@@ -4,7 +4,7 @@
 <suite name="allTests" verbose="3" parallel="classes" thread-count="2">
     <test name="regression">
         <packages>
-            <package name="tests.day24"/>
+            <package name="tests.smokeTest"/>
         </packages>
     </test>
 </suite>

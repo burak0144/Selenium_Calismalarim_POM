@@ -18,7 +18,7 @@ public class C04_HotelMyCampPositiveLogin {
         HotelMyCampPage hotelMyCampPage=new HotelMyCampPage();
         hotelMyCampPage.ilkLoginLinki.click();
     //    test data username: manager ,
-        hotelMyCampPage.userNameBox.sendKeys("manager");
+     //   hotelMyCampPage.userNameBox.sendKeys("manager");
         hotelMyCampPage.userNameBox.sendKeys(ConfigReader.getProperty("HMCValidUsername"));
     //    test data password : Manager1!
         hotelMyCampPage.passwordBox.sendKeys("Manager1!");

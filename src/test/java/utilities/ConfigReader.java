@@ -10,7 +10,7 @@ public class ConfigReader {
     //test class'larindan class ismiyle ulasmak icin static yaptik
 
     static {
-        String path="src/configuration.properties";
+        String path="configuration.properties";
         try {
 
             FileInputStream fis=new FileInputStream(path);//dosyayi akisa aldik
