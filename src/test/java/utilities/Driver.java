@@ -3,6 +3,7 @@ package utilities;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
 
@@ -23,7 +24,10 @@ public class Driver {
        // sonraki calistirmalarda atama olmasin istiyoruz
        // bunun icin driver=new ChromeDriver(); satiri if blogu icine alacagiz
         if(driver==null) {  //eger chromeDriver'imiz acik degilse acacak yoksa acmayacak
-        driver=new ChromeDriver();  // sayfa aciksa obje 2. defa olusmaz
+            ChromeOptions co=new ChromeOptions();
+            co.addArguments("--remote-allow-origins=*");
+
+            driver = new ChromeDriver(co);  // sayfa aciksa obje 2. defa olusmaz
         }
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));

@@ -28,7 +28,10 @@ public class CrossDriver {
                 //buraya parametre olarak girdigimiz degeri yazdik
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
+                    ChromeOptions co=new ChromeOptions();
+                    co.addArguments("--remote-allow-origins=*");
+
+                    driver = new ChromeDriver(co);
                     break;
                 case "edge":
                     WebDriverManager.edgedriver().setup();
@@ -48,7 +51,10 @@ public class CrossDriver {
                     break;
                 default:
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
+                    ChromeOptions co2=new ChromeOptions();
+                    co2.addArguments("--remote-allow-origins=*");
+
+                    driver = new ChromeDriver(co2);
                     break;
 
 
