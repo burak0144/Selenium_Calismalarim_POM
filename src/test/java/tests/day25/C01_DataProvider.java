@@ -25,6 +25,7 @@ public class C01_DataProvider {
         String actualKelime = amazonPage.sonucYazisiElementi.getText();
         Assert.assertTrue(actualKelime.contains(kelimeler));
         //sayfayi kapatalim
+
         Driver.closeDriver();
     }
 }
