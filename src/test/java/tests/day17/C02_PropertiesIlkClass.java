@@ -16,6 +16,8 @@ public class C02_PropertiesIlkClass {
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         //     Login butonuna bas
         HotelMyCampPage hotelMyCampPage=new HotelMyCampPage();
+        hotelMyCampPage.giris1.click();
+        hotelMyCampPage.giris2.click();
         hotelMyCampPage.ilkLoginLinki.click();
         //     test data username: manager ,
         hotelMyCampPage.userNameBox.sendKeys(ConfigReader.getProperty("HMCValidUsername"));

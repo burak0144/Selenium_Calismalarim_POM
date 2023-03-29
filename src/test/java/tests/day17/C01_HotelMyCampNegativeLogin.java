@@ -12,6 +12,8 @@ public class C01_HotelMyCampNegativeLogin {
         Driver.getDriver().get("https://www.hotelmycamp.com/");
         //    login butonuna bas
         HotelMyCampPage hotelMyCampPage=new HotelMyCampPage();
+        hotelMyCampPage.giris1.click();
+        hotelMyCampPage.giris2.click();
         hotelMyCampPage.ilkLoginLinki.click();
         //    test data username: manager1
        hotelMyCampPage.userNameBox.sendKeys("manager1");
