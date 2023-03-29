@@ -1,5 +1,6 @@
 package tests.day16;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HotelMyCampPage;
@@ -13,8 +14,11 @@ public class C05_HotelMyCampNegativeLogin {
         //2) Bir test method olustur NegativeLoginTest()
         //https://www.hotelmycamp.com/ adresine git
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
+
         //login butonuna bas
         HotelMyCampPage hotelMyCampPage=new HotelMyCampPage();
+        hotelMyCampPage.giris1.click();
+        hotelMyCampPage.giris2.click();
         hotelMyCampPage.ilkLoginLinki.click();
         //test data username: manager1 ,
         hotelMyCampPage.userNameBox.sendKeys(ConfigReader.getProperty("HMCWrongUsername"));

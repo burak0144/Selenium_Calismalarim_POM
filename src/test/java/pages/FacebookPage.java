@@ -28,6 +28,8 @@ public class FacebookPage {
     public WebElement getGirisYapilamadiEvetBendim;
 
 
+
+
     public void bekle (int saniye){
         try {
             Thread.sleep(saniye*1000);
