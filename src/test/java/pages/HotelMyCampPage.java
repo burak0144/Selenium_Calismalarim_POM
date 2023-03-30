@@ -13,7 +13,7 @@ public class HotelMyCampPage {
     @FindBy(xpath = "//a[text()='Log in']")
     public WebElement ilkLoginLinki;
 
-    @FindBy(xpath = "//input[@type='text']")
+    @FindBy(css = "input#UserName")
     public WebElement userNameBox;
 
     @FindBy(xpath = "//input[@id='Password']")
@@ -28,7 +28,7 @@ public class HotelMyCampPage {
     @FindBy(xpath = "//span[@class='caption-subject font-green-sharp bold uppercase']")
     public WebElement basariliGirisYazisiElementi;
 
-    @FindBy(xpath = "//span[text()='Hotel Management']")
+    @FindBy(css = "#menuHotels")
     public WebElement hotelManagementLinki;
 
     @FindBy(xpath = "//a[@href='/admin/HotelAdmin']")
@@ -36,6 +36,12 @@ public class HotelMyCampPage {
 
     @FindBy(xpath = "//a[@class='btn btn-circle btn-default']")
     public WebElement addHotelLinki;
+
+    @FindBy(xpath = "//a[@href='/admin/HotelRoomAdmin']")
+    public WebElement hotelRoom;
+
+    @FindBy(xpath = "//span[text()='List Of Hotelrooms']")
+    public WebElement listOfHotelRoomText;
 
     @FindBy(xpath = "(//input[@type='text'])[1]")
     public WebElement addHotelCodeKutusu;
@@ -57,6 +63,27 @@ public class HotelMyCampPage {
 
     @FindBy(css = "a#proceed-link")
     public WebElement giris2;
+
+    @FindBy(css = ".hidden-480")
+    public WebElement addUser;
+
+    @FindBy(css = "select#IDRole")
+    public WebElement role;
+
+    @FindBy(xpath = "//div[@class='radio']")
+    public WebElement radio;
+
+    @FindBy(css = "button#btnSubmit")
+    public WebElement saveButton;
+
+    @FindBy(xpath = "//div[text()='User was inserted successfully']")
+    public WebElement succesfullText;
+
+    @FindBy(xpath = "//button[@class='btn btn-primary']")
+    public WebElement succesfullOKButton;
+
+
+
 
     public void bekle(int saniye) {
         try {
