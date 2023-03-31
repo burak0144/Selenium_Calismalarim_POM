@@ -24,6 +24,8 @@ public class NegativeLoginTest {
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         //   login butonuna bas
         HotelMyCampPage hotelMyCampPage=new HotelMyCampPage();
+        hotelMyCampPage.giris1.click();
+        hotelMyCampPage.giris2.click();
         hotelMyCampPage.ilkLoginLinki.click();
         //   test data username: manager
         hotelMyCampPage.userNameBox.sendKeys(ConfigReader.getProperty("HMCValidUsername"));
@@ -39,6 +41,8 @@ public class NegativeLoginTest {
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         //   login butonuna bas
         HotelMyCampPage hotelMyCampPage=new HotelMyCampPage();
+        hotelMyCampPage.giris1.click();
+        hotelMyCampPage.giris2.click();
         hotelMyCampPage.ilkLoginLinki.click();
         //   test data username: manager
         hotelMyCampPage.userNameBox.sendKeys(ConfigReader.getProperty("HMCWrongUsername"));
@@ -54,6 +58,8 @@ public class NegativeLoginTest {
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         //   login butonuna bas
         HotelMyCampPage hotelMyCampPage=new HotelMyCampPage();
+        hotelMyCampPage.giris1.click();
+        hotelMyCampPage.giris2.click();
         hotelMyCampPage.ilkLoginLinki.click();
         //   test data username: manager
         hotelMyCampPage.userNameBox.sendKeys(ConfigReader.getProperty("HMCWrongUsername"));
