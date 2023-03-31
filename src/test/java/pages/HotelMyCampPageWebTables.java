@@ -40,7 +40,10 @@ public class HotelMyCampPageWebTables {
 
 
     public void girisYap(){
+        HotelMyCampPage hotelMyCampPage=new HotelMyCampPage();
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
+        hotelMyCampPage.giris1.click();
+        hotelMyCampPage.giris2.click();
         ilkLoginLinki.click();
         userNameBox.sendKeys(ConfigReader.getProperty("HMCValidUsername"));
         passwordBox.sendKeys(ConfigReader.getProperty("HMCValidPassword"));
