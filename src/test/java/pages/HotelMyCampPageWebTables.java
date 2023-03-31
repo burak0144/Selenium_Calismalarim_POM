@@ -38,12 +38,17 @@ public class HotelMyCampPageWebTables {
     @FindBy(xpath = "//tbody//tr")
     public List<WebElement> satirlarListesi;
 
+    @FindBy(css = "button#details-button")
+    public WebElement giris1;
+
+    @FindBy(css = "a#proceed-link")
+    public WebElement giris2;
+
 
     public void girisYap(){
-        HotelMyCampPage hotelMyCampPage=new HotelMyCampPage();
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
-        hotelMyCampPage.giris1.click();
-        hotelMyCampPage.giris2.click();
+        giris1.click();
+        giris2.click();
         ilkLoginLinki.click();
         userNameBox.sendKeys(ConfigReader.getProperty("HMCValidUsername"));
         passwordBox.sendKeys(ConfigReader.getProperty("HMCValidPassword"));
